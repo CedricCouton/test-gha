@@ -10,7 +10,7 @@ jobs:
         id: cache-poetry
         uses: actions/cache@v2
         with:
-          path: ~/.poetry
+          path: /opt/hostedtoolcache/node
           key: node_19.9.0
       - name: Setup Node
         uses: actions/setup-node@v3
