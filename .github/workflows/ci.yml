@@ -6,7 +6,7 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-     - name: Cache Poetry
+      - name: Cache Poetry
         id: cache-poetry
         uses: actions/cache@v2
         with:
