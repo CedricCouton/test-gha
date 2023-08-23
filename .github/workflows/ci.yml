@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{env.NODE_VERSION}}
+          node-version: 19.9.0
       - name: Install packages
         run: |
           yarn install --pure-lockfile
