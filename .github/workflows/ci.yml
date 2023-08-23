@@ -1,14 +1,17 @@
 name: CI
 on: [push]
-env:
-  NODE_VERSION: 17.0.1
-  RUBY_VERSION: 3.1.2
 
 jobs:
   tests:
     name: Tests
     runs-on: ubuntu-latest
     steps:
+     - name: Cache Poetry
+        id: cache-poetry
+        uses: actions/cache@v2
+        with:
+          path: ~/.poetry
+          key: node_19.9.0
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -16,3 +19,4 @@ jobs:
       - name: Run tests
         run: |
           which node
+          echo $HOME
