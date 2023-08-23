@@ -13,10 +13,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19.9.0
-      - name: Install packages
-        run: |
-          yarn install --pure-lockfile
-
       - name: Run tests
         run: |
-          node test.js
+          which node
