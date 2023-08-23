@@ -6,8 +6,8 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - name: Cache Poetry
-        id: cache-poetry
+      - name: Cache Node js
+        id: cache-nodejs
         uses: actions/cache@v2
         with:
           path: /opt/hostedtoolcache/node
